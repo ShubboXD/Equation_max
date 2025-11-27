@@ -13,6 +13,6 @@ fn main() {
     if guess == x {
         println!("Right")
     } else {
-        print!("Wrong")
+        println!("Wrong")
     }
 }
