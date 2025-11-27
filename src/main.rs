@@ -1,18 +1,15 @@
 use std::io::{self, Write};
 
-fn main() {
-    let x = 5;
-    print!("Input: ");
-    io::stdout().flush().unwrap();
+fn main () {
     let mut guess = String::new();
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
-    let guess: i32 = guess.trim().parse()
-        .expect("Please type a number");
+    print!("Enter your guess: ");
+    io::stdout().flush().unwrap();
+    io::stdin().read_line(&mut guess).unwrap();
+    let guess: i32 = guess.trim().parse().unwrap();
+    let x = 1;
     if guess == x {
-        println!("Right")
+        println!("You won")
     } else {
-        println!("Wrong")
+        println!("You lost")
     }
 }
