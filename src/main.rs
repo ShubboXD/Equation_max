@@ -14,7 +14,7 @@ fn main () {
     io::stdin().read_line(&mut guess)
     .expect("Failed to read line");
     let guess: i32 = guess.trim().parse()
-    .expect("Need a number Input");
+    .expect("Need a number input");
     
     if guess == x + y {
         println!("You won")
