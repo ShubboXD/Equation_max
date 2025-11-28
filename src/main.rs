@@ -5,15 +5,18 @@ use rand::Rng;
 fn main () {
     let mut rng = rand::thread_rng();
     let mut guess = String::new();
-    let x = rng.gen_range(0..=1);
-    print!("Enter your guess: ");
+    let x = rng.gen_range(0..11);
+    let y = rng.gen_range(0..11);
+    let z = rng.gen_range(0..11);
+    println!("x = {x} and y + {z} = {}", y + z);
+    print!("What is the value of x + y: ");
     io::stdout().flush().unwrap();
     io::stdin().read_line(&mut guess)
     .expect("Failed to read line");
     let guess: i32 = guess.trim().parse()
     .expect("Need a number Input");
     
-    if guess == x {
+    if guess == x + y {
         println!("You won")
     } else {
         println!("You lost")
