@@ -5,9 +5,9 @@ use rand::Rng;
 fn main () {
     let mut rng = rand::thread_rng();
     let mut guess = String::new();
-    let x = rng.gen_range(0..11);
-    let y = rng.gen_range(0..11);
-    let z = rng.gen_range(0..11);
+    let x = rng.gen_range(0..101);
+    let y = rng.gen_range(0..101);
+    let z = rng.gen_range(0..101);
     println!("x = {x} and y + {z} = {}", y + z);
     print!("What is the value of x + y: ");
     io::stdout().flush().unwrap();
