@@ -22,7 +22,7 @@ fn main () {
     .expect("Need a +ve number input");
     let max_tries: u32 = max_tries.trim().parse()
     .expect("Need a +ve number input");
-        // somethingss
+        // some variables
         let mut correct_anss = 0;
         let mut plays = 0;
         println!();
